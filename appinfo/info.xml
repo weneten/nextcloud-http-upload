@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <info>
-    <id>largefileupload</id>
+    <id>http_uploader</id>
     <name>Large File Upload</name>
     <description>An app for uploading large files to Nextcloud via chunked HTTP uploads.</description>
     <version>1.0.0</version>
     <licence>agpl</licence>
     <author>Your Name</author>
-    <namespace>LargeFileUpload</namespace>
+    <namespace>HttpUploader</namespace>
     <types>
         <filesystem/>
         <files/>

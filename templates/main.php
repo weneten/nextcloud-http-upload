@@ -1,6 +1,6 @@
 <?php
-style('largefileupload', 'largefileupload');
-script('largefileupload', 'largefileupload');
+style(\OCA\HttpUploader\AppInfo\Application::APP_ID, 'largefileupload');
+script(\OCA\HttpUploader\AppInfo\Application::APP_ID, 'largefileupload');
 ?>
 
 <div class="upload-container">
