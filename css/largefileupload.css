@@ -1,0 +1,40 @@
+.upload-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-container h2 {
+    margin-top: 0;
+}
+
+.upload-container input[type="file"],
+.upload-container input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.upload-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-container button:hover {
+    background-color: #0056b3;
+}
+
+.upload-container progress {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.upload-container #status {
+    margin-top: 10px;
+    font-weight: bold;
+}
