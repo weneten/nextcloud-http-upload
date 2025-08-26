@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('chunk', chunk);
 
             try {
-                const response = await fetch(OC.generateUrl('/apps/largefileupload/upload/chunk'), {
+                const response = await fetch(OC.generateUrl('/apps/http_uploader/upload/chunk'), {
                     method: 'POST',
                     body: formData,
                 });
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('targetPath', targetPathInput.value || ''); // Default to empty if not set
 
         try {
-            const response = await fetch(OC.generateUrl('/apps/largefileupload/upload/assemble'), {
+            const response = await fetch(OC.generateUrl('/apps/http_uploader/upload/assemble'), {
                 method: 'POST',
                 body: formData,
             });

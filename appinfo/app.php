@@ -1,18 +1,19 @@
 <?php
 use OCP\Util;
 use OCP\IL10N;
+use OCA\HttpUploader\AppInfo\Application;
 
 // Initialize the localization service
-$l = \OC::$server->getL10N('largefileupload');
+$l = \OC::$server->getL10N(Application::APP_ID);
 
-Util::addStyle('largefileupload', 'largefileupload');
-Util::addScript('largefileupload', 'largefileupload');
+Util::addStyle(Application::APP_ID, 'largefileupload');
+Util::addScript(Application::APP_ID, 'largefileupload');
 
 $navigationEntry = [
-    'id' => 'largefileupload',
+    'id' => Application::APP_ID,
     'order' => 50,
-    'href' => \OC::$server->getURLGenerator()->linkToRoute('largefileupload.page.index'),
-    'icon' => \OC::$server->getURLGenerator()->imagePath('largefileupload', 'app.svg'),
+    'href' => \OC::$server->getURLGenerator()->linkToRoute(Application::APP_ID . '.page.index'),
+    'icon' => \OC::$server->getURLGenerator()->imagePath(Application::APP_ID, 'app.svg'),
     'name' => $l->t('Large File Upload'),
 ];
 

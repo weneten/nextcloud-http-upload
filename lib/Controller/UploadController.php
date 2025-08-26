@@ -1,5 +1,5 @@
 <?php
-namespace OCA\LargeFileUpload\Controller;
+namespace OCA\HttpUploader\Controller;
 
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
@@ -32,7 +32,7 @@ class UploadController extends Controller {
             return new DataResponse(['error' => 'Invalid chunk upload'], Http::STATUS_BAD_REQUEST);
         }
 
-        $tempDir = \OC::$server->getTempManager()->getTemporaryFolder() . 'largefileupload_' . $this->userId . '_' . $fileName;
+        $tempDir = \OC::$server->getTempManager()->getTemporaryFolder() . 'http_uploader_' . $this->userId . '_' . $fileName;
         if (!is_dir($tempDir)) {
             mkdir($tempDir, 0777, true);
         }
@@ -52,7 +52,7 @@ class UploadController extends Controller {
         $totalChunks = (int)$this->request->getParam('totalChunks');
         $targetPath = $this->request->getParam('targetPath', '');
 
-        $tempDir = \OC::$server->getTempManager()->getTemporaryFolder() . 'largefileupload_' . $this->userId . '_' . $fileName;
+        $tempDir = \OC::$server->getTempManager()->getTemporaryFolder() . 'http_uploader_' . $this->userId . '_' . $fileName;
         $finalPath = $this->userFolder->getPath() . '/' . $targetPath . '/' . $fileName;
 
         try {

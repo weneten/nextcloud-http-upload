@@ -1,9 +1,10 @@
 <?php
-namespace OCA\LargeFileUpload\Controller;
+namespace OCA\HttpUploader\Controller;
 
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
+use OCA\HttpUploader\AppInfo\Application;
 
 class PageController extends Controller {
     public function __construct($appName, IRequest $request) {
@@ -15,6 +16,6 @@ class PageController extends Controller {
      * @NoCSRFRequired
      */
     public function index() {
-        return new TemplateResponse('largefileupload', 'main');
+        return new TemplateResponse(Application::APP_ID, 'main');
     }
 }
