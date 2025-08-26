@@ -9,8 +9,10 @@
     <namespace>LargeFileUpload</namespace>
     <types>
         <filesystem/>
+        <files/>
+        <ui/>
     </types>
     <dependencies>
-        <nextcloud min-version="20" max-version="28"/>
+        <nextcloud min-version="20" max-version="32"/>
     </dependencies>
 </info>
