@@ -1,18 +1,24 @@
 <?xml version="1.0"?>
 <info>
-    <id>http_uploader</id>
-    <name>Large File Upload</name>
-    <description>An app for uploading large files to Nextcloud via chunked HTTP uploads.</description>
-    <version>1.0.0</version>
-    <licence>agpl</licence>
+    <id>http_upload</id>  <!-- Your app's unique ID -->
+    <name>HTTP Uploader</name>
+    <summary>Upload large files via HTTP to Nextcloud</summary>
+    <description>Allows uploading large files on the web interface.</description>
+    <version>1.0.0</version>  <!-- Your app version -->
+    <licence>AGPL</licence>
     <author>Your Name</author>
-    <namespace>HttpUploader</namespace>
-    <types>
-        <filesystem/>
-        <files/>
-        <ui/>
-    </types>
+    <category>tools</category>
+    <website>https://github.com/weneten/nextcloud-http-upload</website>
+    <repository type="git">https://github.com/weneten/nextcloud-http-upload.git</repository>
     <dependencies>
-        <nextcloud min-version="20" max-version="32"/>
+        <nextcloud min-version="28" max-version="30"/>  <!-- Adjust to target Nextcloud versions -->
     </dependencies>
+    <navigation>
+        <name>HTTP Upload</name>  <!-- Display name in the sidebar -->
+        <route>http_upload.page.index</route>  <!-- Route to your app's main page; must match a route in routes.php -->
+        <order>10</order>  <!-- Position in the sidebar (lower numbers appear higher) -->
+        <!-- Optional: <classes>nav-http-upload</classes> for custom CSS classes -->
+        <!-- Optional: <icon>app.svg</icon> for a custom icon (place SVG in img/app.svg) -->
+        <!-- Optional: <role>menubar</role> if it's for the top menu instead of sidebar -->
+    </navigation>
 </info>
